@@ -1,5 +1,5 @@
 import type { ChangeEvent } from 'react';
-import { Video, Mic, Upload, Sparkles, Star, Camera } from 'lucide-react';
+import { Video, Mic, Upload, Sparkles } from 'lucide-react';
 import type { FormData } from '../Form';
 import SectionHeader from '../SectionHeader';
 
