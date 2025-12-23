@@ -1,5 +1,5 @@
 import type { ChangeEvent } from 'react';
-import { Clock, Zap, Users, Heart, Shield } from 'lucide-react';
+import { Clock, Zap, Users} from 'lucide-react';
 import type { FormData } from '../Form';
 import SectionHeader from '../SectionHeader';
 
@@ -11,7 +11,7 @@ interface StepProps {
 const StepAstrologyAssessment2 = ({ formData, onChange }: StepProps) => {
     return (
         <div className="animate-fade-in space-y-10">
-            <SectionHeader number={9} title="Astrology Assessment - Part 2" icon={Clock} />
+            <SectionHeader number={9} title="Astrology Assessment - Part 2" />
 
             <div className="space-y-10">
                 {/* 5-Minute Structure */}
