@@ -1,5 +1,4 @@
 import type { ChangeEvent } from 'react';
-import { Clock } from 'lucide-react';
 import type { FormData } from '../Form';
 import SectionHeader from '../SectionHeader';
 
@@ -11,7 +10,7 @@ interface StepProps {
 const StepAvailability = ({ formData, onChange }: StepProps) => {
     return (
         <div className="animate-fade-in">
-            <SectionHeader number={5} title="Availability" icon={Clock} />
+            <SectionHeader number={5} title="Availability"  />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                     <label className="block text-sm font-medium text-slate-400 mb-2">Daily Availability (Hours/Day)</label>
