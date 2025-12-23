@@ -78,7 +78,7 @@ const StepOptional = ({ formData, onChange, onFileChange }: StepProps & { onFile
 
     return (
         <div className="animate-fade-in space-y-10">
-            <SectionHeader number={7} title="Optional (For Faster Review)" icon={Video} />
+            <SectionHeader number={7} title="Optional" />
 
             <div className="space-y-10">
                 {/* Upload Fields */}
