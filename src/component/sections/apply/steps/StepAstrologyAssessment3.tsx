@@ -11,7 +11,7 @@ interface StepProps {
 const StepAstrologyAssessment3 = ({ formData, onChange }: StepProps) => {
     return (
         <div className="animate-fade-in space-y-10">
-            <SectionHeader number={10} title="Astrology Assessment - Part 3" icon={Star} />
+            <SectionHeader number={10} title="Astrology Assessment - Part 3" />
 
             <div className="space-y-10">
                 {/* Planetary vs Psychological */}
