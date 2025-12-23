@@ -1,4 +1,4 @@
-import { Star, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import StarryBg from '../Background/StarryBg';
 
 const Hero = () => (
