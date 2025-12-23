@@ -1,5 +1,5 @@
 import type { ChangeEvent } from 'react';
-import { Mic } from 'lucide-react';
+
 import type { FormData } from '../Form';
 import SectionHeader from '../SectionHeader';
 
@@ -12,7 +12,7 @@ interface StepProps {
 const StepLanguage = ({ formData, onChange, onCheckboxChange }: StepProps) => {
     return (
         <div className="animate-fade-in">
-            <SectionHeader number={3} title="Language & Communication" icon={Mic} />
+            <SectionHeader number={3} title="Language & Communication"  />
             <div className="space-y-6">
                 <div>
                     <label className="block text-sm font-medium text-slate-400 mb-3">Languages Known</label>
