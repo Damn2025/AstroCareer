@@ -1,4 +1,4 @@
-import { Upload, FileText } from 'lucide-react';
+import { FileText } from 'lucide-react';
 import type { FormData } from '../Form';
 import SectionHeader from '../SectionHeader';
 
@@ -41,7 +41,7 @@ const StepDocuments = ({ formData, onFileChange }: { formData: FormData; onFileC
 
     return (
         <div className="animate-fade-in">
-            <SectionHeader number={6} title="Documents Upload" icon={Upload} />
+            <SectionHeader number={6} title="Documents Upload"  />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {documents.map((doc) => {
                     // @ts-ignore - Dynamic access to formData
