@@ -30,7 +30,7 @@ export const BENEFITS: Benefit[] = [
     },
     {
         title: "Complete Transparency",
-        description: "We maintain clear and honest communication between astrologers and CastroRemedis. No hidden policies, no confusion — just trust and mutual respect.",
+        description: "We maintain clear and honest communication between astrologers and AstroRemedis. No hidden policies, no confusion — just trust and mutual respect.",
         icon: Search
     }
 ];
