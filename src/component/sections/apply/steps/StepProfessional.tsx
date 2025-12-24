@@ -1,5 +1,4 @@
 import type { ChangeEvent } from 'react';
-import { Briefcase } from 'lucide-react';
 import type { FormData } from '../Form';
 import SectionHeader from '../SectionHeader';
 
@@ -11,7 +10,7 @@ interface StepProps {
 const StepProfessional = ({ formData, onChange }: StepProps) => {
     return (
         <div className="animate-fade-in">
-            <SectionHeader number={7} title="Professional Experience" icon={Briefcase} />
+            <SectionHeader number={7} title="Professional Experience"  />
             <div className="space-y-8">
                 <div>
                     <label className="block text-sm font-medium text-slate-400 mb-4">Have you worked on using an Astrology App before?</label>

@@ -1,5 +1,5 @@
 import type { ChangeEvent } from 'react';
-import { CheckCircle, Sparkles, Star, Moon } from 'lucide-react';
+import {  Sparkles, Star, Moon } from 'lucide-react';
 import type { FormData } from '../Form';
 import SectionHeader from '../SectionHeader';
 
@@ -11,7 +11,7 @@ interface StepProps {
 const StepDeclaration = ({ formData, onDeclarationChange }: StepProps) => {
     return (
         <div className="animate-fade-in h-full flex flex-col justify-center space-y-8">
-            <SectionHeader number={10} title="Declaration" icon={CheckCircle} />
+            <SectionHeader number={10} title="Declaration"  />
 
             <div className="relative">
                 {/* Decorative Elements */}

@@ -2,7 +2,6 @@
 import NavBar from './component/layout/Navbar';
 import Hero from './component/sections/Hero';
 import BenefitsGrid from './component/sections/benefits/BenefitsGrid';
-import Culture from './component/sections/Culture';
 import Testimonials from './component/sections/Testimonials';
 import AstrologerRegistrationForm from './component/sections/apply/AstrologerRegistrationForm';
 import Footer from './component/layout/Footer';

@@ -1,5 +1,5 @@
 import type { ChangeEvent } from 'react';
-import { Star } from 'lucide-react';
+
 import type { FormData } from '../Form';
 import SectionHeader from '../SectionHeader';
 
@@ -12,7 +12,7 @@ interface StepProps {
 const StepExpertise = ({ formData, onChange, onCheckboxChange }: StepProps) => {
     return (
         <div className="animate-fade-in">
-            <SectionHeader number={2} title="Astrology Expertise" icon={Star} />
+            <SectionHeader number={2} title="Astrology Expertise" />
             <div className="space-y-6">
                 <div>
                     <label className="block text-sm font-medium text-slate-400 mb-3">Primary Astrology Skills (Select all that apply)</label>

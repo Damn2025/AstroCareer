@@ -1,5 +1,9 @@
 import type { ChangeEvent } from 'react';
+<<<<<<< HEAD
 import { BookOpen, Sparkles } from 'lucide-react';
+=======
+import { Sparkles} from 'lucide-react';
+>>>>>>> 6d0d441adac98a303cf1b7bfa4dcccfadb2cd880
 import type { FormData } from '../Form';
 import SectionHeader from '../SectionHeader';
 
@@ -11,7 +15,7 @@ interface StepProps {
 const StepAstrologyAssessment1 = ({ formData, onChange }: StepProps) => {
     return (
         <div className="animate-fade-in space-y-10">
-            <SectionHeader number={8} title="Astrology Assessment - Part 1" icon={BookOpen} />
+            <SectionHeader number={8} title="Astrology Assessment - Part 1" />
 
             <div className="space-y-10">
                 {/* About Yourself */}

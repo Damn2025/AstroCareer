@@ -11,7 +11,7 @@ interface StepProps {
 const StepBasicDetails = ({ formData, onChange }: StepProps) => {
     return (
         <div className="animate-fade-in space-y-8">
-            <SectionHeader number={1} title="Basic Details" icon={User}  />
+            <SectionHeader number={1} title="Basic Details"/>
 
             <div className="space-y-8">
                 {/* Full Name Field */}

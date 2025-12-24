@@ -1,4 +1,4 @@
-import { Instagram, Twitter, Facebook, Youtube, Linkedin } from 'lucide-react';
+import { Instagram, Facebook, } from 'lucide-react';
 import AstroLogo from '../../assets/Astro_LOGO.png';
 
 const Footer = () => (
