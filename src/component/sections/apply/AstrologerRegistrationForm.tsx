@@ -116,11 +116,6 @@ const AstrologerRegistrationForm = () => {
         }
     };
 
-    const handleReset = () => {
-        setIsSuccess(false);
-        setFormData(INITIAL_FORM_DATA);
-        setCurrentStep(1);
-    };
 
     if (isSuccess) {
         return (
@@ -199,6 +194,7 @@ const AstrologerRegistrationForm = () => {
                             <span className="text-amber-400 font-semibold text-lg font-serif">
                                 Step {currentStep} of {totalSteps}
                             </span>
+                           
                         </div>
 
                         <div className="relative">
