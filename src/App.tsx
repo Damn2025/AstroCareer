@@ -6,6 +6,7 @@ import Testimonials from './component/sections/Testimonials';
 import AstrologerRegistrationForm from './component/sections/apply/AstrologerRegistrationForm';
 import Footer from './component/layout/Footer';
 import './App.css';
+import FloatingContactIcons from './component/layout/FloatingContactIcons';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Testimonials />
       </main>
       <Footer />
+      <FloatingContactIcons />
     </div>
   );
 }

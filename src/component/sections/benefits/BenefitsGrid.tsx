@@ -61,7 +61,7 @@ const BenefitsGrid = () => (
                     <Sparkles className="w-8 h-8 text-yellow-400 animate-pulse" />
                 </div>
                 <p className="text-slate-300 max-w-3xl mx-auto text-base md:text-lg px-4 md:px-0 leading-relaxed font-light">
-                    We believe in nurturing the whole being. Our benefits package is designed to support your physical, mental, and spiritual trajectory through the cosmos.
+                    We believe in nurturing the whole being. Our benefit-packages are designed to support your physical, mental, and spiritual trajectory through the cosmos.
                 </p>
                 <div className="mt-8 flex justify-center">
                     <div className="h-px w-24 bg-gradient-to-r from-transparent via-amber-500 to-transparent" />

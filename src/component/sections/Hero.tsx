@@ -6,7 +6,7 @@ const Hero = () => (
         <StarryBg />
         <div className="inline-block animate-fade-in-up mb-4 md:mb-6">
             <span className="py-1 px-3 md:px-4 border border-amber-500/30 rounded-full bg-amber-900/10 text-amber-200 text-xs md:text-sm tracking-[0.2em] uppercase backdrop-blur-sm">
-                We are hiring
+                We are onboarding
             </span>
         </div>
 
