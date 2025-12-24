@@ -1,5 +1,5 @@
 import type { ChangeEvent } from 'react';
-import { BookOpen, Sparkles, Star, Heart } from 'lucide-react';
+import { BookOpen, Sparkles } from 'lucide-react';
 import type { FormData } from '../Form';
 import SectionHeader from '../SectionHeader';
 

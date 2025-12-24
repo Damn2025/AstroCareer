@@ -1,5 +1,5 @@
 import type { ChangeEvent } from 'react';
-import { Clock, Zap, Users, Heart, Shield } from 'lucide-react';
+import { Clock, Zap } from 'lucide-react';
 import type { FormData } from '../Form';
 import SectionHeader from '../SectionHeader';
 

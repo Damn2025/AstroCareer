@@ -11,8 +11,7 @@ import StepProfessional from './steps/StepProfessional';
 import StepOptional from './steps/StepOptional';
 import StepDeclaration from './steps/StepDeclaration';
 import StepAstrologyAssessment1 from './steps/StepAstrologyAssessment1';
-import StepAstrologyAssessment2 from './steps/StepAstrologyAssessment2';
-import StepAstrologyAssessment3 from './steps/StepAstrologyAssessment3';
+
 
 const AstrologerRegistrationForm = () => {
     // REPLACE WITH YOUR GOOGLE APPS SCRIPT WEB APP URL
@@ -219,9 +218,7 @@ const AstrologerRegistrationForm = () => {
                             )}
                             {currentStep === 7 && <StepProfessional formData={formData} onChange={handleInputChange} />}
                             {currentStep === 8 && <StepAstrologyAssessment1 formData={formData} onChange={handleInputChange} />}
-                            {currentStep === 9 && <StepAstrologyAssessment2 formData={formData} onChange={handleInputChange} />}
-                            {currentStep === 10 && <StepAstrologyAssessment3 formData={formData} onChange={handleInputChange} />}
-                            {currentStep === 11 && (
+                            {currentStep === 9 && (
                                 <StepOptional
                                     formData={formData}
                                     onChange={handleInputChange}

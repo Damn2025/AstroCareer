@@ -1,5 +1,5 @@
 import type { ChangeEvent } from 'react';
-import { Video, Mic, Upload, Sparkles, Star, Camera } from 'lucide-react';
+import { Video, Mic, Upload, Sparkles} from 'lucide-react';
 import type { FormData } from '../Form';
 import SectionHeader from '../SectionHeader';
 
@@ -85,9 +85,6 @@ const StepOptional = ({ formData, onChange, onFileChange }: StepProps & { onFile
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="animate-slide-in-left animation-delay-100">
                         {renderUploadField('introVideo', 'Introduction Video (30-60s)', 'Briefly introduce yourself and expertise.', <Video className="w-5 h-5 text-amber-400" />, "video/*")}
-                    </div>
-                    <div className="animate-slide-in-right animation-delay-200">
-                        {renderUploadField('samplePrediction', 'Sample Prediction', 'Audio, video, or written sample.', <Mic className="w-5 h-5 text-amber-400" />, "video/*,audio/*,application/pdf,image/*")}
                     </div>
                 </div>
 

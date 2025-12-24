@@ -39,7 +39,7 @@ const StepDeclaration = ({ formData, onDeclarationChange }: StepProps) => {
                         </div>
 
                         <p className="text-lg text-slate-300 italic mb-8 leading-relaxed text-center font-light">
-                            "I hereby declare that all information provided is true and correct. I agree to follow Nebula Navigators' ethical standards, quality guidelines, and consultation policies. I understand that my cosmic journey begins with trust and truth."
+                            "I hereby declare that all information provided is true and correct. I agree to follow AstroRemedis Navigators' ethical standards, quality guidelines, and consultation policies. I understand that my cosmic journey begins with trust and truth."
                         </p>
 
                         <div className="flex justify-center">
