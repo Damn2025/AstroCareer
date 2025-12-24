@@ -35,7 +35,7 @@ const StepDocuments = ({ formData, onFileChange }: { formData: FormData; onFileC
 
     const documents = [
         { id: 'profilePic', label: "Recent Photograph", sub: "Professional, clear", icon: FileText },
-        { id: 'certificate', label: "Completion Certificate", sub: "PDF/JPG", icon: FileText },
+        { id: 'certificate', label: "Course Completion Certificate", sub: "PDF/JPG", icon: FileText },
         { id: 'idProof', label: "Govt ID Proof", sub: "Aadhaar/PAN", icon: FileText }
     ];
 
