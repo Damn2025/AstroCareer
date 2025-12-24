@@ -39,7 +39,7 @@ const StepBasicDetails = ({ formData, onChange }: StepProps) => {
                     <div className="group animate-slide-in-left animation-delay-200">
                         <label className="form-label-enhanced flex items-center gap-2">
                             <Phone className="w-4 h-4 text-amber-400" />
-                            Mobile Number (WhatsApp)
+                            Mobile Number 
                         </label>
                         <div className="relative">
                             <input
