@@ -199,9 +199,6 @@ const AstrologerRegistrationForm = () => {
                             <span className="text-amber-400 font-semibold text-lg font-serif">
                                 Step {currentStep} of {totalSteps}
                             </span>
-                            <span className="text-slate-500 font-medium bg-slate-800/50 px-3 py-1 rounded-full text-sm">
-                                {Math.round((currentStep / totalSteps) * 100)}% Complete
-                            </span>
                         </div>
 
                         <div className="relative">
