@@ -17,7 +17,6 @@ function App() {
         <AstrologerRegistrationForm />
         <Testimonials />
       </main>
-
       <Footer />
     </div>
   );

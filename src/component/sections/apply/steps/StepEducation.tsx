@@ -11,7 +11,7 @@ interface StepProps {
 const StepEducation = ({ formData, onChange }: StepProps) => {
     return (
         <div className="animate-fade-in">
-            <SectionHeader number={4} title="Education & Lineage"  />
+            <SectionHeader number={4} title="Education "  />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="col-span-1 md:col-span-2">
                     <label className="block text-sm font-medium text-slate-400 mb-2">Guru / Teacher Name</label>

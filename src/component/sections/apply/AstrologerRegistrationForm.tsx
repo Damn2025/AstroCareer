@@ -15,17 +15,57 @@ import StepAstrologyAssessment1 from './steps/StepAstrologyAssessment1';
 
 const AstrologerRegistrationForm = () => {
     // REPLACE WITH YOUR GOOGLE APPS SCRIPT WEB APP URL
-    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzXGyRQtPHDlUKZ_KnQbVP0kZJYgml5A1tzQ-iPcuHfOrmkcmicrZEiDlcUP2jIHsoXrQ/exec";
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzU2HBuUz8ztj94YxYKcoSZONNBCLv5X307iaQ-Q7ZYopG3NHUzcpI2NzXZlvKLCXK2rw/exec";
 
     const [isSuccess, setIsSuccess] = useState(false);
     const [currentStep, setCurrentStep] = useState(1);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [formData, setFormData] = useState(INITIAL_FORM_DATA);
 
-    const totalSteps = 12;
+    const totalSteps = 10;
+
+    // Validation rules per step (excluding optional step 9)
+    const isStepValid = (): boolean => {
+        switch (currentStep) {
+            case 1: // Basic Details
+                return (
+                    formData.fullName.trim() !== '' &&
+                    formData.mobile.trim() !== '' &&
+                    formData.email.trim() !== '' &&
+                    formData.cityState.trim() !== '' &&
+                    formData.age.trim() !== ''
+                );
+            case 2: // Expertise
+                return formData.skills.length > 0 || formData.otherSkill.trim() !== '';
+            case 3: // Language
+                return (
+                    (formData.languages.length > 0 || formData.otherLanguage.trim() !== '') &&
+                    formData.proficiency.trim() !== ''
+                );
+            case 4: // Education
+                return formData.guruName.trim() !== '';
+            case 5: // Availability
+                return formData.dailyHours.trim() !== '' && formData.nightAvailability.trim() !== '';
+            case 6: // Documents
+                return Boolean(formData.profilePic && formData.certificate && formData.idProof);
+            case 7: // Professional
+                return (
+                    formData.workedBefore.trim() !== '' &&
+                    (formData.workedBefore !== 'Yes' || formData.appName.trim() !== '')
+                );
+            case 8: // Assessment 1
+                return formData.aboutYourself.trim() !== '' && formData.problemIdentification.trim() !== '';
+            case 9: // Optional - always valid
+                return true;
+            case 10: // Declaration handled by submit disabled
+                return formData.declaration === true;
+            default:
+                return true;
+        }
+    };
 
     const nextStep = () => {
-        // Optional: Add validation logic here
+        if (!isStepValid()) return;
         if (currentStep < totalSteps) setCurrentStep(prev => prev + 1);
     };
 
@@ -96,29 +136,18 @@ const AstrologerRegistrationForm = () => {
                         {/* Success Animation */}
                         <div className="relative mb-8">
                             <div className="w-24 h-24 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-full flex items-center justify-center shadow-2xl animate-bounce">
-                                <Star className="w-12 h-12 text-white fill-current animate-spin" />
+                                <Star className="w-12 h-12 text-white fill-current " />
                             </div>
                             <div className="absolute -inset-4 bg-amber-400/20 rounded-full animate-ping" />
                         </div>
 
                         <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent mb-6 animate-fade-in-up" style={{ fontFamily: 'Cinzel, serif' }}>
-                            Application Received! ✨
+                            Application Received! 
                         </h2>
                         <p className="text-slate-300 max-w-lg mb-8 text-lg leading-relaxed animate-fade-in-up animation-delay-200" style={{ fontFamily: 'Cinzel, serif' }}>
-                            Your celestial journey has begun. Our team of cosmic verifiers will review your details and reach out to you shortly.
+                            Your celestial journey has begun. Our team  will review your details and reach out to you shortly.
                         </p>
-                        <button
-                            onClick={handleReset}
-                            className="group relative px-10 py-4 bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-600 hover:from-amber-300 hover:via-yellow-400 hover:to-amber-500 text-zinc-900 rounded-full font-bold transition-all duration-300 shadow-2xl hover:shadow-amber-500/50 hover:-translate-y-1 hover:scale-105 animate-fade-in-up animation-delay-400"
-                            style={{ fontFamily: 'Cinzel, serif' }}
-                        >
-                            <span className="relative z-10 flex items-center gap-3">
-                                <Sparkles className="w-5 h-5 animate-pulse" />
-                                Submit Another Application
-                                <Sparkles className="w-5 h-5 animate-pulse" />
-                            </span>
-                            <div className="absolute inset-0 bg-gradient-to-r from-amber-300 to-yellow-500 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-                        </button>
+                       
                     </div>
                 </div>
             </section>
@@ -225,7 +254,7 @@ const AstrologerRegistrationForm = () => {
                                     onFileChange={(field, file) => setFormData(prev => ({ ...prev, [field]: file }))}
                                 />
                             )}
-                            {currentStep === 12 && (
+                            {currentStep === 10 && (
                                 <StepDeclaration
                                     formData={formData}
                                     onDeclarationChange={(e) => setFormData(prev => ({ ...prev, declaration: e.target.checked }))}
@@ -254,7 +283,12 @@ const AstrologerRegistrationForm = () => {
                                 <button
                                     type="button"
                                     onClick={nextStep}
-                                    className="group relative flex items-center justify-center space-x-2 sm:space-x-3 px-6 sm:px-8 md:px-10 py-2 sm:py-3 md:py-4 bg-gradient-to-r from-white to-amber-100 hover:from-amber-100 hover:to-yellow-200 text-slate-900 rounded-full font-bold transition-all duration-300 shadow-2xl hover:shadow-white/30 hover:-translate-y-1 hover:scale-105 text-sm sm:text-base md:text-lg overflow-hidden"
+                                    disabled={!isStepValid()}
+                                    className={`group relative flex items-center justify-center space-x-2 sm:space-x-3 px-6 sm:px-8 md:px-10 py-2 sm:py-3 md:py-4 rounded-full font-bold transition-all duration-300 text-sm sm:text-base md:text-lg overflow-hidden shadow-2xl ${
+                                        !isStepValid()
+                                            ? 'bg-zinc-700/60 text-slate-400 cursor-not-allowed'
+                                            : 'bg-gradient-to-r from-white to-amber-100 hover:from-amber-100 hover:to-yellow-200 text-slate-900 hover:shadow-white/30 hover:-translate-y-1 hover:scale-105'
+                                    }`}
                                 >
                                     <div className="absolute inset-0 bg-gradient-to-r from-amber-400/0 to-yellow-500/0 group-hover:from-amber-400/20 group-hover:to-yellow-500/20 transition-all duration-300" />
                                     <span className="relative z-10 font-serif">Next Step</span>

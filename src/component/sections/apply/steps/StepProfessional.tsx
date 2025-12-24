@@ -52,24 +52,7 @@ const StepProfessional = ({ formData, onChange }: StepProps) => {
                         </div>
                     )}
                 </div>
-                <div>
-                    <label className="block text-sm font-medium text-slate-400 mb-4">Preferred Earnings Model</label>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        {['Per Minute', 'Per Session', 'Revenue Sharing'].map(model => (
-                            <label key={model} className={`flex items-center justify-center space-x-2 p-4 rounded-lg border cursor-pointer transition-all ${formData.earningsModel === model ? 'bg-amber-500/20 border-amber-500' : 'bg-zinc-950 border-white/10 hover:border-white/30'}`}>
-                                <input
-                                    type="radio"
-                                    name="earningsModel"
-                                    value={model}
-                                    checked={formData.earningsModel === model}
-                                    onChange={onChange}
-                                    className="text-amber-600 focus:ring-amber-500 bg-zinc-950 border-slate-600"
-                                />
-                                <span className="text-slate-300 text-sm font-medium">{model}</span>
-                            </label>
-                        ))}
-                    </div>
-                </div>
+               
             </div>
         </div>
     );

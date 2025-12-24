@@ -31,9 +31,9 @@ const testimonials: Testimonial[] = [
  
   {
     id: 2,
-    name: "Ritambhara Ji",
+    name: "Rishiraj ji",
     specialty: "Vedic Astrology",
-    experience: "8 Years Exp.",
+    experience: "22 Years Exp.",
     image: RitambharaJiImg,
     quote: "The energy of this team is golden. I feel supported not just as an employee, but as a practitioner. The amber theme truly reflects the warmth and wisdom we share.",
 
@@ -42,16 +42,16 @@ const testimonials: Testimonial[] = [
     id: 3,
     name: "Satyanand Ji",
     specialty: "Nadi Shastra",
-    experience: "22 Years Exp.",
+    experience: "16 Years Exp.",
     image: SatyanandjiImg,
     quote: "A perfectly organized ecosystem for astrologers. The technology connects us seamlessly with devotees worldwide while maintaining the sanctity of our practice.",
 
   },
   {
     id: 4,
-    name: "Mamta",
+    name: "Chitralekha",
     specialty: "Gemology & Vastu" ,
-    experience: "15+ Years Exp.",
+    experience: "14 Years Exp.",
     image: MamtaImg,
     quote: "Joining this platform was the best decision for my spiritual journey. The respect given to the ancient sciences here is unparalleled, and the clientele is genuinely seeking guidance.",
 
